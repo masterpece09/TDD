@@ -65,7 +65,7 @@ public class TestWithSpringBootTest {
 		carBean = new RestTemplate()
 				.postForEntity("http://localhost:" + port + "/tdd/save-car", carBean , CarBean.class).getBody();
 		
-		assertThat(carBean.getName()).isEqualTo("Toyota1");
+		assertThat(carBean.getName()).isEqualTo("Toyota");
 		assertThat(carBean.getDetail()).isEqualTo("Toyota 4*4");
 		
 
